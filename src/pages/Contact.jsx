@@ -10,11 +10,17 @@ export default function Contact() {
     
     const formData = new FormData(e.target);
     
-    // REPLACE WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; 
+    // Your Google Apps Script Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz7yUYL3vjwyqthyvJ5ChOQfLMn8C-zt3nhFhPFFhMtDTNIX-No9S_48SuEuyTG3VxGwQ/exec"; 
 
     try {
-      await fetch(scriptURL, { method: "POST", body: formData });
+      // Added mode: "no-cors" to bypass the cross-origin block
+      await fetch(scriptURL, { 
+        method: "POST", 
+        body: formData,
+        mode: "no-cors"
+      });
+      
       setStatus("Message Sent Successfully!");
       e.target.reset();
     } catch (error) {
