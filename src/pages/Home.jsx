@@ -22,9 +22,10 @@ export default function Home() {
             <div className="inline-block bg-blue-500/20 text-blue-300 font-semibold px-4 py-1.5 rounded-full text-sm mb-6 border border-blue-500/30">
               #1 Ranked Tuition Center in the City
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Transform Your <span className="text-blue-400">Academic</span> Journey With Us
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white capitalize">
+  Knowledge doesn't come but <br className="hidden md:block" />
+  <span className="text-brand-yellow">you have to go to it !</span>
+</h1>
             <p className="text-lg text-slate-300 mb-8 max-w-xl">
               Expert faculty, personalized study plans, and interactive learning methodologies designed to help students score top grades and build strong fundamentals.
             </p>

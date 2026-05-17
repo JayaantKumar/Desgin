@@ -40,7 +40,7 @@ export default function Contact() {
             <div className="bg-blue-100 p-3 rounded-full text-brand-blue"><Phone size={24} /></div>
             <div>
               <p className="font-semibold">Phone / WhatsApp</p>
-              <p>+91 123 456 7890</p>
+              <p>+91 70240 12483</p>
             </div>
           </div>
           <div className="flex items-center gap-4 text-gray-700">
