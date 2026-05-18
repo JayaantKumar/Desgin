@@ -2,23 +2,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Define specific colors sampled from the poster logo */
-  --color-brand-blue: #0B67C2; /* Main educational blue */
-  --color-brand-yellow: #FEDB00; /* Bright accent yellow */
-  --color-brand-dark: #001A33; /* Dark blue/black for text */
-
-  /* Semantic mapping for easier coding across components */
-  --color-primary: var(--color-brand-blue);
-  --color-secondary: var(--color-brand-dark);
-  --color-accent: var(--color-brand-yellow);
+  --color-brand-blue: #0B67C2; 
+  --color-brand-yellow: #FEDB00; 
+  --color-brand-dark: #1e293b; /* Softer dark blue/gray for readability */
+  --color-brand-light: #f4f8fc; /* Very light airy blue for backgrounds */
 }
 
-/* Optional standard global styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* Use the dark blue from the poster for text instead of standard gray */
+  /* Apply Poppins globally */
+  font-family: 'Poppins', sans-serif;
   color: theme(--color-brand-dark);
 }
