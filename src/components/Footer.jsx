@@ -13,7 +13,6 @@ export default function Footer() {
           {/* Brand & About */}
           <div>
             <Link to="/" className="flex items-center gap-3 text-white font-bold text-2xl mb-6">
-              {/* Added a white background to the logo so it pops on the dark footer */}
               <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-14 w-auto bg-white rounded-full p-1" />
               Mentee To Mentor
             </Link>
@@ -96,11 +95,10 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-brand-yellow shrink-0 mt-1" />
-                <span className="text-slate-400">Shop no. 114/115, Chouhan Commercial Complex, Chouhan Town, Junwani Bhilai - 490020</span>
+                <span className="text-slate-400">Shop No. 114-115, Chouhan Commercial Complex, Junwani, Bhilai, Chhattisgarh 490020</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-brand-yellow shrink-0" />
-                {/* Updated Phone Number */}
                 <span className="text-slate-400">+91 70240 12483</span>
               </li>
               <li className="flex items-center gap-3">
@@ -113,9 +111,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div className="border-t border-slate-800 pt-8 flex justify-center items-center text-sm text-slate-500">
           <p>&copy; {currentYear} Mentee To Mentor. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Designed by Newresolutionstudio</p>
         </div>
       </div>
     </footer>
