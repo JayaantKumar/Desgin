@@ -15,18 +15,17 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
-      {/* Increased padding for more white space */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20"> 
           <div className="flex items-center">
-            {/* Made the logo text larger (text-2xl to text-3xl) and extra bold */}
-            <Link to="/" className="flex items-center gap-3">
-              <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-14 w-auto object-contain" />
-              <div className="hidden sm:flex flex-col justify-center">
-                <span className="text-brand-blue font-extrabold text-2xl uppercase tracking-tight leading-none">
+            {/* Logo and Text - Now explicitly visible on all screen sizes */}
+            <Link to="/" className="flex items-center gap-2 md:gap-3">
+              <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-10 md:h-14 w-auto object-contain" />
+              <div className="flex flex-col justify-center">
+                <span className="text-brand-blue font-extrabold text-lg md:text-2xl uppercase tracking-tight leading-none">
                   Mentee To Mentor
                 </span>
-                <span className="text-gray-500 text-[10px] font-medium tracking-widest uppercase mt-1">
+                <span className="text-gray-500 text-[8px] md:text-[10px] font-medium tracking-widest uppercase mt-1">
                   Educational Excellence
                 </span>
               </div>

@@ -2,10 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-blue: #0B67C2; 
-  --color-brand-yellow: #FEDB00; 
-  --color-brand-dark: #1e293b; /* Softer dark blue/gray for readability */
-  --color-brand-light: #f4f8fc; /* Very light airy blue for backgrounds */
+  /* Updated to match the brochure's specific shades */
+  --color-brand-blue: #1A528A; /* Royal/Navy Blue */
+  --color-brand-yellow: #F6BC14; /* Warm Mustard Gold */
+  --color-brand-dark: #1e293b; 
+  --color-brand-light: #FDFBF7; /* Warm cream/off-white background */
 }
 
 html {
@@ -16,4 +17,22 @@ body {
   /* Apply Poppins globally */
   font-family: 'Poppins', sans-serif;
   color: theme(--color-brand-dark);
+}
+
+/* Add this to the bottom of src/index.css */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }

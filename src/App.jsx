@@ -7,19 +7,25 @@ import About from "./pages/About";
 import Faculty from "./pages/Faculty";
 import Subjects from "./pages/Subjects";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ"; // Added
+import Privacy from "./pages/Privacy"; // Added
+import Terms from "./pages/Terms"; // Added
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-16">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/subjects" element={<Subjects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} /> {/* Added */}
+            <Route path="/privacy-policy" element={<Privacy />} /> {/* Added */}
+            <Route path="/terms-of-service" element={<Terms />} /> {/* Added */}
           </Routes>
         </main>
         <FloatingWhatsApp />
