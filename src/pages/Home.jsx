@@ -9,7 +9,7 @@ import {
   MapPin,
   Award,
   Star,
-  Quote,
+  Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MEET THE TEAM PREVIEW */}
+      {/* 5. MEET THE TEAM PREVIEW (UPDATED CIRCULAR STYLE) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -236,15 +236,28 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Dr. Arvind Sharma", subject: "Mathematics", image: "https://ui-avatars.com/api/?name=Arvind+Sharma&background=1A528A&color=fff&size=256&font-size=0.4" },
-              { name: "Mrs. Sneha Patel", subject: "Physics", image: "https://ui-avatars.com/api/?name=Sneha+Patel&background=1e293b&color=fff&size=256&font-size=0.4" },
-              { name: "Mr. Rohan Verma", subject: "English Literature", image: "https://ui-avatars.com/api/?name=Rohan+Verma&background=1A528A&color=fff&size=256&font-size=0.4" }
+              { name: "Mrs. Dasari Swati", qualification: "M.SC In Maths & B.ED", image: "/faculty/swati.jpg" },
+              { name: "Mr. Abhishek Choudhary", qualification: "Computer Science Engineer", image: "/faculty/abhishek.jpg" },
+              { name: "Mohd. Sarfaraz Khan", qualification: "Post Graduate In M.COM", image: "/faculty/sarfaraz.jpg" }
             ].map((teacher, i) => (
-              <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group border border-slate-100">
-                <img src={teacher.image} alt={teacher.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition duration-500" />
-                <div className="p-8 text-center bg-white relative z-10">
+              <div key={i} className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div className="bg-brand-blue h-20 w-full relative">
+                  <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+                    <div className="w-24 h-24 bg-white p-1 rounded-full shadow-md">
+                      <img 
+                        src={teacher.image} 
+                        alt={teacher.name} 
+                        className="w-full h-full object-cover rounded-full bg-slate-100"
+                        onError={(e) => {
+                          e.target.src = `https://ui-avatars.com/api/?name=${teacher.name.replace(/ /g, '+')}&background=F6BC14&color=1e293b&size=256&font-size=0.33`;
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-14 pb-8 px-6 text-center">
                   <h4 className="text-xl font-bold text-brand-dark mb-1">{teacher.name}</h4>
-                  <p className="text-brand-blue font-medium">{teacher.subject}</p>
+                  <p className="text-brand-blue font-medium text-sm line-clamp-1">{teacher.qualification}</p>
                 </div>
               </div>
             ))}
@@ -314,8 +327,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. BOTTOM CTA */}
-      <section className="py-24 px-4 bg-white">
+      {/* 8. BOTTOM CTA */}
+      <section className="py-24 px-4 bg-brand-light">
         <div className="max-w-5xl mx-auto text-center bg-brand-blue rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
           
