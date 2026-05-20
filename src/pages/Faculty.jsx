@@ -1,63 +1,71 @@
-import { GraduationCap, Mail, Phone, Award } from "lucide-react";
+import { GraduationCap, Mail, Briefcase, Award } from "lucide-react";
 
 export default function Faculty() {
-  // Extracted data from the ID cards (Name, Role, Qualification, Email, Phone)
+  // Extracted data from the ID cards (Name, Role, Qualification, Email, Experience)
   const facultyMembers = [
     {
       name: "Mrs. Dasari Swati",
       role: "Mentor",
       qualification: "M.SC In Maths & B.ED",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "dasari_swati@mentee2mentor.in",
+      experience: "10+ Years", // Update this with real data
       image: "/faculty/swati.jpg"
     },
     {
       name: "Mr. Abhishek Choudhary",
       role: "Mentor",
       qualification: "Computer Science Engineer",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "abhishek@mentee2mentor.in",
+      experience: "5+ Years", // Update this with real data
       image: "/faculty/abhishek.jpg"
     },
     {
       name: "Miss. Afsa Anjum",
       role: "Mentor",
       qualification: "Graduate (CS)",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "afsa_anjum@mentee2mentor.in",
+      experience: "4+ Years", // Update this with real data
       image: "/faculty/afsa.jpg"
     },
     {
       name: "Mohd. Sarfaraz Khan",
       role: "Mentor",
       qualification: "Post Graduate In M.COM",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "sarfaraz@mentee2mentor.in",
+      experience: "6+ Years", // Update this with real data
       image: "/faculty/sarfaraz.jpg"
     },
     {
       name: "Miss. Monika Sahu",
       role: "Mentor",
       qualification: "B.sc",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "monika_sahu@mentee2mentor.in",
+      experience: "3+ Years", // Update this with real data
       image: "/faculty/monika.jpg"
     },
     {
       name: "Miss. Nisha Prajapati",
       role: "Mentor",
-      qualification: "B.SC Final Year (pursuing)",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      qualification: "B.SC Graduated",
+      email: "nisha_prajapati@mentee2mentor.in",
+      experience: "2+ Years", // Update this with real data
       image: "/faculty/nisha.jpg"
     },
     {
       name: "Mohd. Zaffer",
       role: "Mentor",
       qualification: "Graduated",
-      email: "menteetomentor92@gmail.com",
-      phone: "7024012483 , 7024312483",
+      email: "m_zaffer@mentee2mentor.in",
+      experience: "5+ Years", // Update this with real data
       image: "/faculty/zaffer.jpg"
+    },
+    {
+      name: "Mr. Krishna Kant Garhe",
+      role: "Mentor",
+      qualification: "Graduated in Electronics and Telecommunication",
+      email: "krishna@mentee2mentor.in",
+      experience: "7+ Years", // Update this with real data
+      image: "/faculty/krishna.jpg"
     }
   ];
 
@@ -122,10 +130,12 @@ export default function Faculty() {
                     <span className="truncate" title={member.email}>{member.email}</span>
                   </div>
 
-                  {/* Phone */}
+                  {/* Experience */}
                   <div className="flex items-center justify-center gap-2 text-slate-500 text-xs">
-                    <Phone size={14} className="text-green-500 shrink-0" />
-                    <span className="truncate" title={member.phone}>{member.phone}</span>
+                    <Briefcase size={14} className="text-green-500 shrink-0" />
+                    <span className="truncate" title={`${member.experience} Experience`}>
+                      {member.experience} Experience
+                    </span>
                   </div>
                 </div>
               </div>
