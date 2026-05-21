@@ -320,6 +320,9 @@ export default function Home() {
             <div className="overflow-hidden rounded-3xl shadow-lg">
               <img src="/gallery/classroom_3.jpg" alt="Active Learning and Student Engagement" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
             </div>
+             <div className="overflow-hidden rounded-3xl shadow-lg">
+              <img src="/gallery/classroom_5.jpg" alt="Active Learning and Student Engagement" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+            </div>
             <div className="overflow-hidden rounded-3xl md:col-span-2 shadow-lg">
               <img src="/gallery/classroom_4.jpg" alt="Well-equipped Learning Environment in Bhilai" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
             </div>

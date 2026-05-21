@@ -66,6 +66,14 @@ export default function Faculty() {
       email: "krishna@mentee2mentor.in",
       experience: "7+ Years", // Update this with real data
       image: "/faculty/krishna.jpg"
+    },
+    {
+      name: "Dr Yogesh Tiwari",
+      role: "Mentor",
+      qualification: "M.Tech",
+      email: "yrs_tiwari53@rediffmail.com",
+      experience: "23+ Years", // Update this with real data
+      image: "/faculty/yogesh.jpg"
     }
   ];
 

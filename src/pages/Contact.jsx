@@ -8,20 +8,29 @@ export default function Contact() {
     e.preventDefault();
     setStatus("Sending...");
     
+    // 1. Grab the raw form data
     const formData = new FormData(e.target);
     
+    // 2. CRITICAL FIX: Convert to URL-encoded parameters for Google Apps Script
+    const params = new URLSearchParams(formData);
+    
     // Your Google Apps Script Web App URL
-    const scriptURL = "https://script.google.com/macros/s/AKfycbz7yUYL3vjwyqthyvJ5ChOQfLMn8C-zt3nhFhPFFhMtDTNIX-No9S_48SuEuyTG3VxGwQ/exec"; 
-
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz7yUYL3vjwyqthyvJ5ChOQfLMn8C-zt3nhFhPFFhMtDTNIX-No9S_48SuEuyTG3VxGwQ/exec";
     try {
       await fetch(scriptURL, { 
         method: "POST", 
-        body: formData,
+        body: params, // Sending the converted params here!
         mode: "no-cors"
       });
       
       setStatus("Message Sent Successfully!");
-      e.target.reset();
+      e.target.reset(); // Clears the form fields
+      
+      // Clear the success message after 5 seconds
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+      
     } catch (error) {
       console.error("Error!", error.message);
       setStatus("Error sending message. Please try again.");
@@ -29,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-brand-light min-h-screen pt-24 md:pt-32 pb-16">
+    <div className="bg-brand-light min-h-screen pt-24 md:pt-32 pb-16 animate-in fade-in duration-500">
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-20">
         
         {/* LEFT COLUMN: Contact Info & Map Card */}
@@ -39,7 +48,7 @@ export default function Contact() {
             Ready to start your learning journey? Reach out to us directly or fill out the form, and we'll get back to you promptly.
           </p>
           
-          {/* Email & Phone Row (Matches screenshot style) */}
+          {/* Email & Phone Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
             <div className="flex items-start gap-4">
               <Mail className="text-brand-blue mt-1 shrink-0" size={28} />
@@ -68,12 +77,12 @@ export default function Contact() {
             </p>
             
             {/* Embedded iFrame Map */}
-            <div className="w-full h-[300px] rounded-2xl overflow-hidden border border-slate-100 bg-slate-50">
+            <div className="w-full h-[300px] rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 relative">
               <iframe 
                 src="https://maps.google.com/maps?q=Chouhan%20Commercial%20Complex,%20Junwani,%20Bhilai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
-                style={{ border: 0 }} 
+                style={{ border: 0, position: "absolute", top: 0, left: 0 }} 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
@@ -113,7 +122,17 @@ export default function Contact() {
               <textarea name="message" rows="4" className="w-full px-5 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition bg-slate-50 resize-none" placeholder="How can we help you?"></textarea>
             </div>
             
-            <button type="submit" className="w-full bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20">
+            <button 
+              type="submit" 
+              disabled={status === "Sending..."}
+              className={`w-full text-white py-4 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-lg 
+                ${status === "Message Sent Successfully!" 
+                  ? "bg-green-500 hover:bg-green-600 shadow-green-500/20" 
+                  : "bg-brand-blue hover:bg-blue-700 shadow-blue-500/20"
+                }
+                ${status === "Sending..." ? "opacity-75 cursor-not-allowed" : ""}
+              `}
+            >
               {status || "Send Enquiry"} <Send size={20} />
             </button>
           </form>
