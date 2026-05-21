@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MEET THE TEAM PREVIEW (UPDATED CIRCULAR STYLE) */}
+      {/* 5. MEET THE TEAM PREVIEW (UPDATED WITH CIRCULAR DESIGN) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -236,28 +236,23 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Mrs. Dasari Swati", qualification: "M.SC In Maths & B.ED", image: "/faculty/swati.jpg" },
-              { name: "Mr. Abhishek Choudhary", qualification: "Computer Science Engineer", image: "/faculty/abhishek.jpg" },
-              { name: "Mohd. Sarfaraz Khan", qualification: "Post Graduate In M.COM", image: "/faculty/sarfaraz.jpg" }
+              { name: "Miss. Afsa Anjum", subject: "Graduate (CS)", image: "/faculty/afsa.jpg" },
+              { name: "Mr. Abhishek Choudhary", subject: "Computer Science Engineer", image: "/faculty/abhishek.jpg" },
+              { name: "Mohd. Sarfaraz Khan", subject: "Post Graduate In M.COM", image: "/faculty/sarfaraz.jpg" }
             ].map((teacher, i) => (
-              <div key={i} className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-                <div className="bg-brand-blue h-20 w-full relative">
-                  <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-                    <div className="w-24 h-24 bg-white p-1 rounded-full shadow-md">
-                      <img 
-                        src={teacher.image} 
-                        alt={teacher.name} 
-                        className="w-full h-full object-cover rounded-full bg-slate-100"
-                        onError={(e) => {
-                          e.target.src = `https://ui-avatars.com/api/?name=${teacher.name.replace(/ /g, '+')}&background=F6BC14&color=1e293b&size=256&font-size=0.33`;
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="pt-14 pb-8 px-6 text-center">
+              <div key={i} className="bg-brand-blue rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group border border-slate-100 flex flex-col relative pt-12 pb-8 px-6 text-center">
+                <div className="absolute top-4 right-4 text-brand-yellow"><Star size={24} fill="currentColor" /></div>
+                <img 
+                  src={teacher.image} 
+                  alt={teacher.name} 
+                  className="w-32 h-32 mx-auto rounded-full object-cover object-top border-4 border-slate-100 bg-slate-100 shadow-lg mb-6 group-hover:scale-105 transition duration-500" 
+                  onError={(e) => {
+                    e.target.src = `https://ui-avatars.com/api/?name=${teacher.name.replace(/ /g, '+')}&background=F6BC14&color=1e293b&size=256&font-size=0.33`;
+                  }}
+                />
+                <div className="bg-white mx-[-24px] mb-[-32px] pt-6 pb-8 px-4 mt-auto h-full flex flex-col justify-center border-t border-slate-100">
                   <h4 className="text-xl font-bold text-brand-dark mb-1">{teacher.name}</h4>
-                  <p className="text-brand-blue font-medium text-sm line-clamp-1">{teacher.qualification}</p>
+                  <p className="text-brand-blue font-medium line-clamp-1">{teacher.subject}</p>
                 </div>
               </div>
             ))}
@@ -298,7 +293,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. CLASSROOM GALLERY */}
+      {/* 7. CLASSROOM GALLERY (FIXED MOBILE LAYOUT) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -310,21 +305,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 auto-rows-[250px]">
-            <div className="overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 shadow-lg">
-              <img src="/gallery/classroom_1.jpg" alt="Mentee to Mentor Classroom Session" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+          {/* grid-cols-1 forces a single column on mobile, maintaining natural image ratio */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:auto-rows-[250px]">
+            <div className="overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 shadow-lg bg-slate-50">
+              <img src="/gallery/classroom_1.jpg" alt="Mentee to Mentor Classroom Session" className="w-full h-auto md:h-full object-cover hover:scale-105 transition duration-700 block" />
             </div>
-            <div className="overflow-hidden rounded-3xl shadow-lg">
-              <img src="/gallery/classroom_2.jpg" alt="Interactive Classroom Coaching" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+            <div className="overflow-hidden rounded-3xl shadow-lg bg-slate-50">
+              <img src="/gallery/classroom_2.jpg" alt="Interactive Classroom Coaching" className="w-full h-auto md:h-full object-cover hover:scale-105 transition duration-700 block" />
             </div>
-            <div className="overflow-hidden rounded-3xl shadow-lg">
-              <img src="/gallery/classroom_3.jpg" alt="Active Learning and Student Engagement" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+            <div className="overflow-hidden rounded-3xl shadow-lg bg-slate-50">
+              <img src="/gallery/classroom_5.jpg" alt="Interactive Classroom Coaching" className="w-full h-auto md:h-full object-cover hover:scale-105 transition duration-700 block" />
             </div>
-             <div className="overflow-hidden rounded-3xl shadow-lg">
-              <img src="/gallery/classroom_5.jpg" alt="Active Learning and Student Engagement" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+            <div className="overflow-hidden rounded-3xl shadow-lg bg-slate-50">
+              <img src="/gallery/classroom_3.jpg" alt="Active Learning and Student Engagement" className="w-full h-auto md:h-full object-cover hover:scale-105 transition duration-700 block" />
             </div>
-            <div className="overflow-hidden rounded-3xl md:col-span-2 shadow-lg">
-              <img src="/gallery/classroom_4.jpg" alt="Well-equipped Learning Environment in Bhilai" className="w-full h-full object-cover hover:scale-105 transition duration-700" />
+            <div className="overflow-hidden rounded-3xl md:col-span-2 shadow-lg bg-slate-50">
+              <img src="/gallery/classroom_4.jpg" alt="Well-equipped Learning Environment in Bhilai" className="w-full h-auto md:h-full object-cover hover:scale-105 transition duration-700 block" />
             </div>
           </div>
         </div>

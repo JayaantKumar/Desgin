@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react"; // Changed Download to FileText icon
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,6 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20"> 
           <div className="flex items-center">
-            {/* Logo and Text - Now explicitly visible on all screen sizes */}
             <Link to="/" className="flex items-center gap-2 md:gap-3">
               <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-10 md:h-14 w-auto object-contain" />
               <div className="flex flex-col justify-center">
@@ -38,6 +37,17 @@ export default function Navbar() {
                  {link.name}
                </Link>
             ))}
+            
+            {/* UPDATED: Opens in new tab instead of downloading */}
+            <a 
+              href="/brochure.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-brand-blue hover:text-brand-yellow transition font-bold flex items-center gap-1.5 ml-2"
+            >
+              <FileText size={18} /> View Brochure
+            </a>
+
             <Link to="/contact" className="bg-brand-yellow text-brand-dark px-6 py-2.5 rounded-lg hover:shadow-md hover:-translate-y-0.5 transition-all font-bold">
               Enroll Now
             </Link>
@@ -51,6 +61,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
           <div className="px-4 pt-4 pb-8 space-y-2 sm:px-3">
@@ -64,6 +75,17 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            
+            {/* UPDATED: Mobile link opens in new tab */}
+            <a 
+              href="/brochure.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-3 text-brand-blue bg-blue-50 hover:bg-blue-100 rounded-lg font-bold transition"
+            >
+              <FileText size={20} /> View Brochure & Fees
+            </a>
+
             <Link 
               to="/contact" 
               onClick={() => setIsOpen(false)}
