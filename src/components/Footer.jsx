@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, FileText } from "lucide-react"; // Changed Download to FileText icon
+import { Mail, Phone, MapPin, FileText } from "lucide-react"; 
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
@@ -8,27 +8,39 @@ export default function Footer() {
   return (
     <footer className="bg-brand-dark text-slate-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        {/* Desktop Layout Fix: 12-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
           
           {/* Brand & About */}
-          <div>
+          <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-3 text-white font-bold text-2xl mb-6">
               <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-14 w-auto bg-white rounded-full p-1" />
               Mentee To Mentor
             </Link>
-            <p className="text-slate-400 leading-relaxed mb-6">
+            <p className="text-slate-400 leading-relaxed mb-6 pr-4">
               Empowering students to achieve their academic goals through expert guidance, personalized attention, and modern teaching methodologies.
             </p>
+            
+            {/* UPDATED: Active Social Media Links */}
             <div className="flex space-x-5">
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors"><FaFacebook size={22} /></a>
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors"><FaTwitter size={22} /></a>
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors"><FaInstagram size={22} /></a>
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors"><FaLinkedin size={22} /></a>
+              <a href="https://www.facebook.com/mentee2mentor" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-yellow transition-colors">
+                <FaFacebook size={22} />
+              </a>
+              <a href="https://x.com/mentee2mentor" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-yellow transition-colors">
+                <FaTwitter size={22} />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors">
+                <FaInstagram size={22} />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors">
+                <FaLinkedin size={22} />
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
@@ -51,7 +63,6 @@ export default function Footer() {
                   <span className="text-brand-yellow text-xs">▶</span> Subjects & Courses
                 </Link>
               </li>
-              {/* UPDATED: Brochure Link in Footer opens in new tab */}
               <li className="pt-2">
                 <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer" className="text-brand-yellow hover:text-white transition-colors flex items-center gap-2 font-semibold">
                   <FileText size={16} /> View Brochure
@@ -61,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Support */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-white font-semibold text-lg mb-6">Support</h3>
             <ul className="space-y-3">
               <li>
@@ -88,21 +99,25 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-4">
             <h3 className="text-white font-semibold text-lg mb-6">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-brand-yellow shrink-0 mt-1" />
                 <span className="text-slate-400">Shop No. 114-115, Chouhan Commercial Complex, Junwani, Bhilai, Chhattisgarh 490020</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-brand-yellow shrink-0" />
-                <span className="text-slate-400">+91 70240 12483</span>
-                <span className="text-slate-400">+91 70243 12483</span>
+              
+              <li className="flex items-start gap-3">
+                <Phone size={20} className="text-brand-yellow shrink-0 mt-1" />
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+917024012483" className="text-slate-400 hover:text-brand-yellow transition-colors">+91 70240 12483</a>
+                  <a href="tel:+917024312483" className="text-slate-400 hover:text-brand-yellow transition-colors">+91 70243 12483</a>
+                </div>
               </li>
+
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-brand-yellow shrink-0" />
-                <span className="text-slate-400">contact@mentee2mentor.in</span>
+                <a href="mailto:contact@mentee2mentor.in" className="text-slate-400 hover:text-brand-yellow transition-colors">contact@mentee2mentor.in</a>
               </li>
             </ul>
           </div>
