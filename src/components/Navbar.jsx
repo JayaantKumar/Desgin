@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, FileText } from "lucide-react"; // Changed Download to FileText icon
+import { Menu, X, FileText } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +16,21 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20"> 
+        
+        {/* INCREASED: Navbar height from h-20 to h-24 to give the larger logo room to breathe */}
+        <div className="flex justify-between h-24"> 
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2 md:gap-3">
-              <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-10 md:h-14 w-auto object-contain" />
+            <Link to="/" className="flex items-center gap-3 md:gap-4">
+              
+              {/* INCREASED: Logo height from h-14 to h-20 */}
+              <img src="/logo.png" alt="Mentee To Mentor Logo" className="h-14 md:h-20 w-auto object-contain" />
+              
               <div className="flex flex-col justify-center">
-                <span className="text-brand-blue font-extrabold text-lg md:text-2xl uppercase tracking-tight leading-none">
+                {/* INCREASED: Brand text size to match the larger logo */}
+                <span className="text-brand-blue font-extrabold text-xl md:text-3xl uppercase tracking-tight leading-none">
                   Mentee To Mentor
                 </span>
-                <span className="text-gray-500 text-[8px] md:text-[10px] font-medium tracking-widest uppercase mt-1">
+                <span className="text-gray-500 text-[9px] md:text-xs font-medium tracking-widest uppercase mt-1.5">
                   Educational Excellence
                 </span>
               </div>
@@ -38,7 +44,6 @@ export default function Navbar() {
                </Link>
             ))}
             
-            {/* UPDATED: Opens in new tab instead of downloading */}
             <a 
               href="/brochure.pdf" 
               target="_blank" 
@@ -76,7 +81,6 @@ export default function Navbar() {
               </Link>
             ))}
             
-            {/* UPDATED: Mobile link opens in new tab */}
             <a 
               href="/brochure.pdf" 
               target="_blank" 
