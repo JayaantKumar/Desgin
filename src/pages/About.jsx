@@ -1,4 +1,4 @@
-import { Target, Lightbulb, ShieldCheck, CheckCircle2, FileText, UserCheck, Calendar } from "lucide-react";
+import { Target, Lightbulb, ShieldCheck, CheckCircle2, FileText, UserCheck, Calendar, Quote } from "lucide-react";
 
 export default function About() {
   return (
@@ -30,6 +30,63 @@ export default function About() {
           <p className="text-lg text-slate-700 leading-relaxed font-medium mt-4">
             Our experienced and compassionate tutors, led by Education experts and Social Workers, create tailored learning strategies that cater to each student's unique needs and aspirations. With a particular focus on building confidence in students and comprehensive academic and exam preparation, MENTEE TO MENTOR is the trusted choice for parents seeking exceptional support and guidance for their children.
           </p>
+        </div>
+
+        {/* DIRECTOR'S DESK SECTION */}
+        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden mb-20">
+          <div className="grid lg:grid-cols-12 gap-0">
+            
+            {/* Image Column */}
+            <div className="lg:col-span-5 bg-blue-50 p-8 md:p-12 flex flex-col items-center justify-center text-center border-b lg:border-b-0 lg:border-r border-slate-100 relative overflow-hidden">
+              <div className="absolute top-8 left-8 text-brand-blue/10 transform -rotate-12">
+                <Quote size={120} />
+              </div>
+              
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white shadow-xl mb-6 relative z-10">
+                <img 
+                  src="/faculty/director.jpg" 
+                  alt="Mrs. Sagheera Khan - Director" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to initials if the image is missing
+                    e.target.src = `https://ui-avatars.com/api/?name=Sagheera+Khan&background=F6BC14&color=1e293b&size=256&font-size=0.33`;
+                  }}
+                />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-brand-dark mb-1 relative z-10">Mrs. Sagheera Khan</h3>
+              <p className="text-brand-blue font-bold uppercase tracking-widest text-sm relative z-10">Director, Mentee To Mentor</p>
+            </div>
+            
+            {/* Text Column */}
+            <div className="lg:col-span-7 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+              <h2 className="text-3xl font-extrabold text-brand-dark mb-6 flex items-center gap-3">
+                <span className="w-8 h-1.5 bg-brand-yellow rounded-full"></span>
+                Director’s Desk
+              </h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed text-lg">
+                <p>
+                  At <span className="font-bold text-brand-dark">Mentee To Mentor</span>, we believe that every child carries immense potential that can blossom with the right guidance, encouragement, and learning environment. Education is not just about achieving good grades — it is about nurturing confidence, discipline, creativity, and the ability to face the future with determination.
+                </p>
+                <p>
+                  In today’s competitive world, children require personalized attention and mentoring that goes beyond traditional classroom learning. Our goal at Mentee To Mentor is to provide quality home tuition services that focus on academic excellence while also supporting the overall growth and development of each child.
+                </p>
+                <p>
+                  We are dedicated to creating a positive and inspiring learning experience where students feel motivated to learn, explore, and grow. Our tutors are not only educators but mentors who understand the unique learning style and potential of every child. Through personalized teaching methods, continuous support, and value-based education, we strive to help students achieve their best.
+                </p>
+                <p>
+                  At Mentee To Mentor, we strongly believe that a strong educational foundation shapes a successful and confident future. We work closely with parents and students to ensure a learning journey that is effective, enjoyable, and result-oriented.
+                </p>
+                <div className="bg-brand-light p-6 rounded-2xl border-l-4 border-brand-yellow my-6">
+                  <p className="font-bold text-brand-dark italic">
+                    "Our vision is to transform every learner from a mentee into a confident mentor of tomorrow."
+                  </p>
+                </div>
+                <p>
+                  Thank you for placing your trust in us and allowing us to be a part of your child’s educational journey.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Mission & Vision */}

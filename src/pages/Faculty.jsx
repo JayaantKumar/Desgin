@@ -8,7 +8,7 @@ export default function Faculty() {
       role: "Mentor",
       qualification: "M.SC In Maths & B.ED",
       email: "dasari_swati@mentee2mentor.in",
-      experience: "10+ Years", // Update this with real data
+      experience: "5+ Years", // Update this with real data
       image: "/faculty/swati.jpg"
     },
     {
@@ -32,7 +32,7 @@ export default function Faculty() {
       role: "Mentor",
       qualification: "Post Graduate In M.COM",
       email: "sarfaraz@mentee2mentor.in",
-      experience: "6+ Years", // Update this with real data
+      experience: "5+ Years", // Update this with real data
       image: "/faculty/sarfaraz.jpg"
     },
     {
@@ -56,15 +56,15 @@ export default function Faculty() {
       role: "Mentor",
       qualification: "Graduated",
       email: "m_zaffer@mentee2mentor.in",
-      experience: "5+ Years", // Update this with real data
+      experience: "2+ Years", // Update this with real data
       image: "/faculty/zaffer.jpg"
     },
     {
       name: "Mr. Krishna Kant Garhe",
       role: "Mentor",
-      qualification: "Graduated in Electronics and Telecommunication",
+      qualification: "Electronics and Telecommunication(B.tech)",
       email: "krishna@mentee2mentor.in",
-      experience: "7+ Years", // Update this with real data
+      experience: "5+ Years", // Update this with real data
       image: "/faculty/krishna.jpg"
     },
     {
@@ -74,6 +74,22 @@ export default function Faculty() {
       email: "yrs_tiwari53@rediffmail.com",
       experience: "23+ Years", // Update this with real data
       image: "/faculty/yogesh.jpg"
+    },
+    {
+      name: "Dr Piyush Tiwari",
+      role: "Mentor",
+      qualification: "M.Tech(Design)",
+      email: "tiwari.piyushtiwari25@gmail.com",
+      experience: "5+ Years", // Update this with real data
+      image: "/faculty/piyush.jpg"
+    },
+     {
+      name: "Mrs. Preeti Banjare",
+      role: "Mentor",
+      qualification: "B.Sc. biology",
+      email: "p.mark090115@gmail.com",
+      experience: "2+ Years", // Update this with real data
+      image: "/faculty/preeti.jpg"
     }
   ];
 

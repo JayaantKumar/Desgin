@@ -30,10 +30,10 @@ export default function Footer() {
               <a href="https://x.com/mentee2mentor" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-yellow transition-colors">
                 <FaTwitter size={22} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors">
+              <a href="https://www.instagram.com/mentee2mentor.in" className="text-slate-400 hover:text-brand-yellow transition-colors">
                 <FaInstagram size={22} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-brand-yellow transition-colors">
+              <a href="https://www.linkedin.com/in/mentee2mentorofficial" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-yellow transition-colors">
                 <FaLinkedin size={22} />
               </a>
             </div>
