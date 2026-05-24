@@ -36,17 +36,17 @@ export default function About() {
         <div className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden mb-20">
           <div className="grid lg:grid-cols-12 gap-0">
             
-            {/* Image Column */}
+            {/* Image Column (UPDATED: Removed circle crop, showing full natural image) */}
             <div className="lg:col-span-5 bg-blue-50 p-8 md:p-12 flex flex-col items-center justify-center text-center border-b lg:border-b-0 lg:border-r border-slate-100 relative overflow-hidden">
               <div className="absolute top-8 left-8 text-brand-blue/10 transform -rotate-12">
                 <Quote size={120} />
               </div>
               
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white shadow-xl mb-6 relative z-10">
+              <div className="w-full max-w-[280px] rounded-2xl overflow-hidden border-8 border-white shadow-xl mb-6 relative z-10 bg-white">
                 <img 
                   src="/faculty/director.jpg" 
                   alt="Mrs. Sagheera Khan - Director" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                   onError={(e) => {
                     // Fallback to initials if the image is missing
                     e.target.src = `https://ui-avatars.com/api/?name=Sagheera+Khan&background=F6BC14&color=1e293b&size=256&font-size=0.33`;

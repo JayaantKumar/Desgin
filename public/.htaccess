@@ -1,7 +1,14 @@
-# public/.htaccess
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # --- FIX FOR WWW CANONICALIZATION ---
+  # If the domain contains "www.", redirect it to the non-www version
+  RewriteCond %{HTTP_HOST} ^www\.mentee2mentor\.in [NC]
+  RewriteRule ^(.*)$ https://mentee2mentor.in/$1 [L,R=301]
+  # ------------------------------------
+
+  # React SPA Routing (Keeps your pages from throwing 404 errors)
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
