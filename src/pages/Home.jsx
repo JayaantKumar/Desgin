@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MEET THE TEAM PREVIEW (UPDATED WITH CIRCULAR DESIGN) */}
+      {/* 5. MEET THE TEAM PREVIEW (UPDATED WITH CIRCULAR DESIGN & NEW IMAGE PATHS) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -236,9 +236,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Miss. Afsa Anjum", subject: "Graduate (CS)", image: "/faculty/afsa.jpg" },
-              { name: "Mr. Abhishek Choudhary", subject: "Computer Science Engineer", image: "/faculty/abhishek.jpg" },
-              { name: "Mohd. Sarfaraz Khan", subject: "Post Graduate In M.COM", image: "/faculty/sarfaraz.jpg" }
+              { name: "Miss. Afsa Anjum", subject: "Graduate (CS)", image: "/staff/afsa.jpg" },
+              { name: "Mr. Abhishek Choudhary", subject: "Computer Science Engineer", image: "/staff/abhishek.jpg" },
+              { name: "Mohd. Sarfaraz Khan", subject: "Post Graduate In M.COM", image: "/staff/sarfaraz.jpg" }
             ].map((teacher, i) => (
               <div key={i} className="bg-brand-blue rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group border border-slate-100 flex flex-col relative pt-12 pb-8 px-6 text-center">
                 <div className="absolute top-4 right-4 text-brand-yellow"><Star size={24} fill="currentColor" /></div>

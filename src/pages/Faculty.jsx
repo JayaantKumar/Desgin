@@ -9,7 +9,7 @@ export default function Faculty() {
       qualification: "M.SC In Maths & B.ED",
       email: "dasari_swati@mentee2mentor.in",
       experience: "5+ Years", // Update this with real data
-      image: "/faculty/swati.jpg"
+      image: "/staff/swati.jpg"
     },
     {
       name: "Mr. Abhishek Choudhary",
@@ -17,7 +17,7 @@ export default function Faculty() {
       qualification: "Computer Science Engineer",
       email: "abhishek@mentee2mentor.in",
       experience: "5+ Years", // Update this with real data
-      image: "/faculty/abhishek.jpg"
+      image: "/staff/abhishek.jpg"
     },
     {
       name: "Miss. Afsa Anjum",
@@ -25,7 +25,7 @@ export default function Faculty() {
       qualification: "Graduate (CS)",
       email: "afsa_anjum@mentee2mentor.in",
       experience: "4+ Years", // Update this with real data
-      image: "/faculty/afsa.jpg"
+      image: "/staff/afsa.jpg"
     },
     {
       name: "Mohd. Sarfaraz Khan",
@@ -33,7 +33,7 @@ export default function Faculty() {
       qualification: "Post Graduate In M.COM",
       email: "sarfaraz@mentee2mentor.in",
       experience: "5+ Years", // Update this with real data
-      image: "/faculty/sarfaraz.jpg"
+      image: "/staff/sarfaraz.jpg"
     },
     {
       name: "Miss. Monika Sahu",
@@ -41,7 +41,7 @@ export default function Faculty() {
       qualification: "B.sc",
       email: "monika_sahu@mentee2mentor.in",
       experience: "3+ Years", // Update this with real data
-      image: "/faculty/monika.jpg"
+      image: "/staff/monika.jpg"
     },
     {
       name: "Miss. Nisha Prajapati",
@@ -49,7 +49,7 @@ export default function Faculty() {
       qualification: "B.SC Graduated",
       email: "nisha_prajapati@mentee2mentor.in",
       experience: "2+ Years", // Update this with real data
-      image: "/faculty/nisha.jpg"
+      image: "/staff/nisha.jpg"
     },
     {
       name: "Mohd. Zaffer",
@@ -57,7 +57,7 @@ export default function Faculty() {
       qualification: "Graduated",
       email: "m_zaffer@mentee2mentor.in",
       experience: "2+ Years", // Update this with real data
-      image: "/faculty/zaffer.jpg"
+      image: "/staff/zaffer.jpg"
     },
     {
       name: "Mr. Krishna Kant Garhe",
@@ -65,7 +65,7 @@ export default function Faculty() {
       qualification: "Electronics and Telecommunication(B.tech)",
       email: "krishna@mentee2mentor.in",
       experience: "5+ Years", // Update this with real data
-      image: "/faculty/krishna.jpg"
+      image: "/staff/krishna.jpg"
     },
     {
       name: "Dr Yogesh Tiwari",
@@ -73,7 +73,7 @@ export default function Faculty() {
       qualification: "M.Tech",
       email: "yrs_tiwari53@rediffmail.com",
       experience: "23+ Years", // Update this with real data
-      image: "/faculty/yogesh.jpg"
+      image: "/staff/yogesh.jpg"
     },
     {
       name: "Dr Piyush Tiwari",
@@ -81,7 +81,7 @@ export default function Faculty() {
       qualification: "M.Tech(Design)",
       email: "tiwari.piyushtiwari25@gmail.com",
       experience: "5+ Years", // Update this with real data
-      image: "/faculty/piyush.jpg"
+      image: "/staff/piyush.jpg"
     },
      {
       name: "Mrs. Preeti Banjare",
@@ -89,7 +89,7 @@ export default function Faculty() {
       qualification: "B.Sc. biology",
       email: "p.mark090115@gmail.com",
       experience: "2+ Years", // Update this with real data
-      image: "/faculty/preeti.jpg"
+      image: "/staff/preeti.jpg"
     }
   ];
 
