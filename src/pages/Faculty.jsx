@@ -80,7 +80,7 @@ export default function Faculty() {
       role: "Mentor",
       qualification: "M.Tech(Design)",
       email: "tiwari.piyushtiwari25@gmail.com",
-      experience: "5+ Years", // Update this with real data
+      experience: "17+ Years", // Update this with real data
       image: "/staff/piyush.jpg"
     },
      {
